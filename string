@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class demo
+{
+    public static void main(String args[]){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the word");
+    int l=0,d=0,ws=0,up=0,lo=0,sp=0;
+    String a=sc.nextLine();
+for(int i=0;i<a.length();i++){
+    char ch=a.charAt(i);
+if(Character.isLetter (ch)){
+l++;
+if(Character.isUpperCase(ch))
+up++;
+else if(Character.isLowerCase(ch))
+lo++;
+}else if(Character.isDigit(ch)){
+d++;
+}else if(Character.isWhitespace(ch)){
+ws++;
+}else
+sp++;
+}
+System.out.println("The given letter are:"+l);
+System.out.println("The given digit are:"+d);
+System.out.println("The given whitespace are:"+ws);
+System.out.println("The given uppercase are:"+up);
+System.out.println("The given lowercase are:"+lo);
+System.out.println("The given specialcase are:"+sp);
+}
+}
